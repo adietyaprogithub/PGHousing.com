@@ -64,15 +64,7 @@ const List = () => {
                     placeholder={options.adult}
                   />
                 </div>
-                <div className="lsOptionItem">
-                  <span className="lsOptionText">Children</span>
-                  <input
-                    type="number"
-                    min={0}
-                    className="lsOptionInput"
-                    placeholder={options.children}
-                  />
-                </div>
+                
                 <div className="lsOptionItem">
                   <span className="lsOptionText">Room</span>
                   <input

@@ -1,22 +1,31 @@
+import { useState } from "react";
 import "./searchItem.css";
 
 const SearchItem = () => {
+
+  const [data , setdata] = useState('Book Room  ')
+
+
+  const handler = ()=> {
+    setdata('Booked ')
+    alert('Congraclation You Have Booked the Room ')
+  }
   return (
     <div className="searchItem">
       <img
-        src="https://cf.bstatic.com/xdata/images/hotel/square600/261707778.webp?k=fa6b6128468ec15e81f7d076b6f2473fa3a80c255582f155cae35f9edbffdd78&o=&s=1"
+        src="https://plus.unsplash.com/premium_photo-1661963540233-94097ba21f27?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1031&q=80"
         alt=""
         className="siImg"
       />
       <div className="siDesc">
-        <h1 className="siTitle">Tower Street Apartments</h1>
+        <h1 className="siTitle">PG Housing Room </h1>
         <span className="siDistance">500m from center</span>
-        <span className="siTaxiOp">Free airport taxi</span>
+        <span className="siTaxiOp">Near to the Station </span>
         <span className="siSubtitle">
-          Studio Apartment with Air conditioning
+           Air conditioning
         </span>
         <span className="siFeatures">
-          Entire studio • 1 bathroom • 21m² 1 full bed
+          • 1 bathroom • 21m² 1 full bed
         </span>
         <span className="siCancelOp">Free cancellation </span>
         <span className="siCancelOpSubtitle">
@@ -29,9 +38,9 @@ const SearchItem = () => {
           <button>8.9</button>
         </div>
         <div className="siDetailTexts">
-          <span className="siPrice">$112</span>
+          <span className="siPrice">$90</span>
           <span className="siTaxOp">Includes taxes and fees</span>
-          <button className="siCheckButton">See availability</button>
+          <button onClick={handler} className="siCheckButton">{data}</button>
         </div>
       </div>
     </div>

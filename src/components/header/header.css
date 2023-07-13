@@ -6,6 +6,10 @@
   position: relative;
 }
 
+.link{
+  color: white;
+}
+
 .headerContainer {
   width: 100%;
   max-width: 1024px;

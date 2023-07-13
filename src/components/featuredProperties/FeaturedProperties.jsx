@@ -2,16 +2,16 @@ import "./featuredProperties.css";
 
 const FeaturedProperties = () => {
   return (
-    <div className="fp">
+    <div className="fp" id="Rooms">
       <div className="fpItem">
         <img
-          src="https://cf.bstatic.com/xdata/images/hotel/square600/13125860.webp?k=e148feeb802ac3d28d1391dad9e4cf1e12d9231f897d0b53ca067bde8a9d3355&o=&s=1"
+          src="https://thumbs.dreamstime.com/b/hostel-dormitory-beds-arranged-room-98117029.jpg"
           alt=""
           className="fpImg"
         />
-        <span className="fpName">Aparthotel Stare Miasto</span>
-        <span className="fpCity">Madrid</span>
-        <span className="fpPrice">Starting from $120</span>
+        <span className="fpName">Pune PGHousing.com</span>
+        <span className="fpCity">Maharashter</span>
+        <span className="fpPrice">Starting from $50/Month</span>
         <div className="fpRating">
           <button>8.9</button>
           <span>Excellent</span>
@@ -19,12 +19,12 @@ const FeaturedProperties = () => {
       </div>
       <div className="fpItem">
         <img
-          src="https://cf.bstatic.com/xdata/images/hotel/max1280x900/215955381.jpg?k=ff739d1d9e0c8e233f78ee3ced82743ef0355e925df8db7135d83b55a00ca07a&o=&hp=1"
+          src="https://plus.unsplash.com/premium_photo-1661963540233-94097ba21f27?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1031&q=80"
           alt=""
           className="fpImg"
         />
-        <span className="fpName">Comfort Suites Airport</span>
-        <span className="fpCity">Austin</span>
+        <span className="fpName">Mumbai PGHousing.com</span>
+        <span className="fpCity">Maharashtra</span>
         <span className="fpPrice">Starting from $140</span>
         <div className="fpRating">
           <button>9.3</button>
@@ -33,13 +33,13 @@ const FeaturedProperties = () => {
       </div>
       <div className="fpItem">
         <img
-          src="https://cf.bstatic.com/xdata/images/hotel/max1280x900/232902339.jpg?k=3947def526b8af0429568b44f9716e79667d640842c48de5e66fd2a8b776accd&o=&hp=1"
+          src="https://images.unsplash.com/photo-1623625434462-e5e42318ae49?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80"
           alt=""
           className="fpImg"
         />
-        <span className="fpName">Four Seasons Hotel</span>
-        <span className="fpCity">Lisbon</span>
-        <span className="fpPrice">Starting from $99</span>
+        <span className="fpName">Ahmdabad PGHousing.com</span>
+        <span className="fpCity">Gujrat</span>
+        <span className="fpPrice">Starting from $70/Month</span>
         <div className="fpRating">
           <button>8.8</button>
           <span>Excellent</span>
@@ -47,13 +47,13 @@ const FeaturedProperties = () => {
       </div>
       <div className="fpItem">
         <img
-          src="https://cf.bstatic.com/xdata/images/hotel/max1280x900/322658536.jpg?k=3fffe63a365fd0ccdc59210188e55188cdb7448b9ec1ddb71b0843172138ec07&o=&hp=1"
+          src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=869&q=80"
           alt=""
           className="fpImg"
         />
-        <span className="fpName">Hilton Garden Inn</span>
-        <span className="fpCity">Berlin</span>
-        <span className="fpPrice">Starting from $105</span>
+        <span className="fpName">Bengaluru PGHousing.com</span>
+        <span className="fpCity">Karanataka</span>
+        <span className="fpPrice">Starting from $70/Month</span>
         <div className="fpRating">
           <button>8.9</button>
           <span>Excellent</span>

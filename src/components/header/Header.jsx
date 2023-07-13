@@ -5,6 +5,9 @@ import {
   faPerson,
   faPlane,
   faTaxi,
+  faCity,
+  faHome,
+  faInfo
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./header.css";
@@ -14,6 +17,8 @@ import "react-date-range/dist/styles.css"; // main css file
 import "react-date-range/dist/theme/default.css"; // theme css file
 import { format } from "date-fns";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 const Header = ({ type }) => {
   const [destination, setDestination] = useState("");
@@ -44,11 +49,14 @@ const Header = ({ type }) => {
   };
 
   const handleSearch = () => {
-    navigate("/hotels", { state: { destination, date, options } });
+    if (!destination || date[0].startDate === date[0].endDate || options.adult <= 0 || options.room <= 0) {
+      window.alert('Please fill in all the required fields.');
+    } else {
+      navigate('/hotels', { state: { destination, date, options } });
+    }
   };
-
   return (
-    <div className="header">
+    <div className="header"  id="Stays">
       <div
         className={
           type === "list" ? "headerContainer listMode" : "headerContainer"
@@ -57,41 +65,52 @@ const Header = ({ type }) => {
         <div className="headerList">
           <div className="headerListItem active">
             <FontAwesomeIcon icon={faBed} />
-            <span>Stays</span>
+            <HashLink smooth to='#Stays'>
+              <span className="link">Stays</span>
+            </HashLink>
+           
           </div>
           <div className="headerListItem">
-            <FontAwesomeIcon icon={faPlane} />
-            <span>Flights</span>
+            <FontAwesomeIcon icon={faCity} />
+            <HashLink smooth to='#City'>
+              <span className="link">City</span>
+            </HashLink>
           </div>
           <div className="headerListItem">
-            <FontAwesomeIcon icon={faCar} />
-            <span>Car rentals</span>
+            <FontAwesomeIcon icon={faHome} />
+            <HashLink smooth to='#Rooms'>
+              <span className="link">Romms</span>
+            </HashLink>
           </div>
+          
           <div className="headerListItem">
-            <FontAwesomeIcon icon={faBed} />
-            <span>Attractions</span>
-          </div>
-          <div className="headerListItem">
-            <FontAwesomeIcon icon={faTaxi} />
-            <span>Airport taxis</span>
+            <FontAwesomeIcon icon={faInfo} />
+            <HashLink smooth to='#Info'>
+              <span className="link">Info</span>
+            </HashLink>
           </div>
         </div>
         {type !== "list" && (
           <>
             <h1 className="headerTitle">
-              A lifetime of discounts? It's Genius.
+              Start Your PG Life with us 
             </h1>
             <p className="headerDesc">
-              Get rewarded for your travels – unlock instant savings of 10% or
-              more with a free Lamabooking account
+              Get rewarded for your PG House  unlock instant savings of 10% or
+              more with a free PGHousing.com account
             </p>
-            <button className="headerBtn">Sign in / Register</button>
+            <div>
+              <Link to ='/Login'>
+              <button className="headerBtn">
+            Sign In</button>
+              </Link>
+            </div>
             <div className="headerSearch">
               <div className="headerSearchItem">
                 <FontAwesomeIcon icon={faBed} className="headerIcon" />
                 <input
                   type="text"
-                  placeholder="Where are you going?"
+                  placeholder="Which City You want to stay ?"
                   className="headerSearchInput"
                   onChange={(e) => setDestination(e.target.value)}
                 />
@@ -121,7 +140,7 @@ const Header = ({ type }) => {
                 <span
                   onClick={() => setOpenOptions(!openOptions)}
                   className="headerSearchText"
-                >{`${options.adult} adult · ${options.children} children · ${options.room} room`}</span>
+                >{`${options.adult} adult  · ${options.room} room`}</span>
                 {openOptions && (
                   <div className="options">
                     <div className="optionItem">
@@ -145,27 +164,7 @@ const Header = ({ type }) => {
                         </button>
                       </div>
                     </div>
-                    <div className="optionItem">
-                      <span className="optionText">Children</span>
-                      <div className="optionCounter">
-                        <button
-                          disabled={options.children <= 0}
-                          className="optionCounterButton"
-                          onClick={() => handleOption("children", "d")}
-                        >
-                          -
-                        </button>
-                        <span className="optionCounterNumber">
-                          {options.children}
-                        </span>
-                        <button
-                          className="optionCounterButton"
-                          onClick={() => handleOption("children", "i")}
-                        >
-                          +
-                        </button>
-                      </div>
-                    </div>
+                    
                     <div className="optionItem">
                       <span className="optionText">Room</span>
                       <div className="optionCounter">
@@ -191,7 +190,7 @@ const Header = ({ type }) => {
                 )}
               </div>
               <div className="headerSearchItem">
-                <button className="headerBtn" onClick={handleSearch}>
+                <button className="headerBtn"  onClick={handleSearch}>
                   Search
                 </button>
               </div>
