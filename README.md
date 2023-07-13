@@ -1,4 +1,4 @@
-# Kanban-Board
+# PGHousing.com
 
 This application provides a hassle-free online room booking service. It offers rooms in various cities across the country, allowing customers to easily make their bookings . 
 
