@@ -7,8 +7,8 @@ This application provides a hassle-free online room booking service. It offers r
 
 ## Live Demo
 
-You can access the live demo of the Kanban Board application here.
-https://kanban-seven-ashy.vercel.app/
+You can access the live demo of the PGHousing.com application here.
+https://pg-housing-com.vercel.app/
 
 <br/>
 
